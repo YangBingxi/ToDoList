@@ -26,7 +26,6 @@ class List(db.Model):
     类的构造函数
     '''
 
-    def __init__(self, content, status, create_date):
+    def __init__(self, content):
         self.content = content
-        self.status = status
         self.create_date = datetime.now()
