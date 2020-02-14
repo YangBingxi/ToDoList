@@ -10,6 +10,9 @@ from ToDoList import app, db
 from ToDoList.models import List
 
 
+# 解决用户名中文输入的问题
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 @app.route("/")
 def index():

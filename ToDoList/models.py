@@ -16,7 +16,7 @@ class User(db.Model):
 
 
 class List(db.Model):
-    # __table_args__ = {'mysql_collate': 'utf8_general_ci'}  # 设置表的编码格式为utf8
+    __table_args__ = {'mysql_collate': 'utf8_general_ci'}  # 设置表的编码格式为utf8
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)  # id：整形、主键、自增
     content = db.Column(db.String(1024))
     create_date = db.Column(db.DateTime)  # 图片创建时间
