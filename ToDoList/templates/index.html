@@ -8,22 +8,22 @@
     <link rel="stylesheet" type="text/css" href="../static/style.css">
 </head>
 <body>
-    <div id="myDIV" class="header">
-        <h2>My To Do List</h2>
-        <input type="text" id="myInput" placeholder="Title...">
-        <span onclick="newElement()" class="addBtn">Add</span>
-      </div>
-      
-      <ul id="myUL">
-        {% for list in lists %}
-          {% if list.status==2: %}
-        <li>{{list.content}}</li>
-          {% endif %}
-          {% if list.status==1: %}
-        <li class="checked">{{list.content}}</li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+<div id="myDIV" class="header">
+    <h2>My To Do List</h2>
+    <input type="text" id="myInput" placeholder="Title...">
+    <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL">
+    {% for list in lists %}
+    {% if list.status==2: %}
+    <li>{{list.content}}</li>
+    {% endif %}
+    {% if list.status==1: %}
+    <li class="checked">{{list.content}}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
 </body>
 </html>
 

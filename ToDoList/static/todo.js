@@ -24,6 +24,7 @@ var list = document.querySelector('ul');
 list.addEventListener('click', function (ev) {
     if (ev.target.tagName === 'LI') {
         ev.target.classList.toggle('checked');
+
     }
 }, false);
 
@@ -39,7 +40,7 @@ function newElement() {
         $.ajax({
             type: 'POST',
             url: '/addlist/',
-            data: {content:inputValue},
+            data: {content: inputValue},
             dataType: 'json'
         }).done();
         document.getElementById("myUL").appendChild(li);
