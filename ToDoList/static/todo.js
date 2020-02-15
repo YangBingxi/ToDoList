@@ -21,12 +21,22 @@ for (i = 0; i < close.length; i++) {
 
 // Add a "checked" symbol when clicking on a list item
 var list = document.querySelector('ul');
-list.addEventListener('click', function (ev) {
-    if (ev.target.tagName === 'LI') {
-        ev.target.classList.toggle('checked');
 
+document.getElementById("myUL").addEventListener("click", function (e) {
+    //console.log(e.target.id);
+    var list_id = e.target.id;
+    console.log(list_id);
+    if (e.target.tagName === 'LI') {
+        e.target.classList.toggle('checked');
+        $.ajax({
+            type: 'POST',
+            url: '/changestatus/',
+            data: {status: 5, list_id: list_id},
+            dataType: 'json'
+        }).done();
     }
 }, false);
+
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {

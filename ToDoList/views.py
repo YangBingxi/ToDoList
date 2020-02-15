@@ -6,7 +6,6 @@ from flask import render_template, request
 from ToDoList import app, db
 from ToDoList.models import List
 
-# 解决用户名中文输入的问题
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -29,9 +28,15 @@ def add_list():
 
 @app.route('/changestatus/', methods={'post', 'get'})
 def change_status():
-    status = request.values['status']
-    list_id = request.values['list_id']
+    status = int(request.values['status'])
+    list_id = int(request.values['list_id'])
     print status, list_id
-    db.session.query(List).filter(List.id == list_id).update({"status": status})
+    li = List.query.filter_by(id=list_id)
+    if status is 5 and li[0].status is 1:
+        li.update({"status": 2})
+    elif status is 5 and li[0].status is 2:
+        li.update({"status": 1})
+    elif status is 0:
+        li.update({"status": 0})
     db.session.commit()
     return ""

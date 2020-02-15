@@ -17,10 +17,10 @@
 <ul id="myUL">
     {% for list in lists %}
     {% if list.status==2: %}
-    <li>{{list.content}}</li>
+    <li id={{list.id}}>{{list.content}}</li>
     {% endif %}
     {% if list.status==1: %}
-    <li class="checked">{{list.content}}</li>
+    <li class="checked" id={{list.id}}>{{list.content}}</li>
     {% endif %}
     {% endfor %}
 </ul>
@@ -28,7 +28,6 @@
 </html>
 
 {% block js %}
-
 <script type="text/javascript" src="../static/todo.js"></script>
 <script type="text/javascript" src="../static/jquery.js"></script>
 
