@@ -33,7 +33,7 @@ def add_list():
 def change_status():
     status = int(request.values['status'])
     list_id = int(request.values['list_id'])
-    print status, list_id
+    # print status, list_id
     li = List.query.filter_by(id=list_id)
     if status is 5 and li[0].status is 1:
         li.update({"status": 2})
