@@ -20,7 +20,7 @@ class List(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)  # id：整形、主键、自增
     content = db.Column(db.String(1024))
     create_date = db.Column(db.DateTime)  # 图片创建时间
-    status = db.Column(db.Integer, default=1)
+    status = db.Column(db.Integer, default=2)
 
     '''
     类的构造函数
