@@ -2,38 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>timeline</title>
-    <link rel="stylesheet" type="text/css" href="../static/timeline.css">
+    <link href="../static/timeline.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="timeline">
     {% for list in lists %}
-        {% if list.status==2: %}
-            <div class="container left">
-                <div style="background-color: #FF9F55"class="content">
-                    <h2>{{list.create_date}}</h2>
-                    <p>{{list.content}}</p>
-                </div>
-            </div>
-        {% endif %}
-        {% if list.status==1: %}
-            <div class="container right">
-                <div style="background-color: green" class="content">
-                    <h2>{{list.create_date}}</h2>
-                    <p>{{list.content}}</p>
-                </div>
-            </div>
-        {% endif %}
-        {% if list.status==0: %}
-            <div class="container right">
-                <div class="content">
-                    <h2>{{list.create_date}}</h2>
-                    <p>{{list.content}}</p>
-                </div>
-            </div>
-        {% endif %}
+    {% if list.status==2: %}
+    <div class="container left">
+        <div class="content" style="background-color: #FF9F55">
+            <h2>{{list.create_date}}</h2>
+            <p>{{list.content}}</p>
+        </div>
+    </div>
+    {% endif %}
+    {% if list.status==1: %}
+    <div class="container right">
+        <div class="content" style="background-color: green">
+            <h2>{{list.create_date}}</h2>
+            <p>{{list.content}}</p>
+        </div>
+    </div>
+    {% endif %}
+    {% if list.status==0: %}
+    <div class="container right">
+        <div class="content">
+            <h2>{{list.create_date}}</h2>
+            <p>{{list.content}}</p>
+        </div>
+    </div>
+    {% endif %}
     {% endfor %}
 
 </div>

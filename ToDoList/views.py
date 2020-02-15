@@ -15,10 +15,12 @@ def index():
     lists = List.query.order_by(db.desc(List.id)).all()
     return render_template('index.html', lists=lists)
 
+
 @app.route("/timeline")
 def timeline():
     lists = List.query.order_by(db.desc(List.id)).all()
     return render_template('timeline.html', lists=lists)
+
 
 @app.route('/addlist/', methods={'post', 'get'})
 def add_list():
