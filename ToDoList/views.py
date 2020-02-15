@@ -23,7 +23,6 @@ def timeline():
 @app.route('/addlist/', methods={'post', 'get'})
 def add_list():
     content = request.values['content']
-    print content
     li = List(content)
     db.session.add(li)
     db.session.commit()
