@@ -118,3 +118,10 @@ input {
 .addBtn:hover {
     background-color: #bbb;
 }
+
+.createDate {
+    float: right;
+    margin-right: 50px;
+    font-size: 14px;
+    color: #000000;
+}

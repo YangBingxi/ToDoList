@@ -18,10 +18,16 @@
 <ul id="myUL">
     {% for list in lists %}
     {% if list.status==2: %}
-    <li id={{list.id}}>{{list.content}}</li>
+    <li id={{list.id}}>
+        {{list.content}}
+        <a class="createDate" href="/timeline">Create Date:&nbsp;&nbsp;{{list.create_date}}</a>
+    </li>
     {% endif %}
     {% if list.status==1: %}
-    <li class="checked" id={{list.id}}>{{list.content}}</li>
+    <li id={{list.id}}>
+        {{list.content}}
+        <a class="createDate" href="/timeline">Create Date:&nbsp;&nbsp;{{list.create_date}}</a>
+    </li>
     {% endif %}
     {% endfor %}
 </ul>
