@@ -125,3 +125,40 @@ input {
     font-size: 14px;
     color: #000000;
 }
+
+/* footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 20px;
+    background: #999999;
+}
+
+.footer-link {
+    color: #4b4f54;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-cont {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 auto;
+    width: 935px;
+}
+
+.footer-items {
+    float: left;
+}
+
+
+.copy-right {
+    color: #4b4f54;
+    float: right;
+    font-size: 14px;
+}
+
