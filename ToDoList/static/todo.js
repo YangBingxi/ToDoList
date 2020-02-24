@@ -15,13 +15,26 @@ var i;
 for (i = 0; i < close.length; i++) {
     close[i].onclick = function () {
         var div = this.parentElement;
-        div.style.display = "none";
+        // div.style.display = "none";
+        window.alert("亲，完成了没就想删除？")
     }
 }
 
 // Add a "checked" symbol when clicking on a list item
 var list = document.querySelector('ul');
 
+document.getElementById("myUL").oncontextmenu = function(e){
+    e.preventDefault();
+};
+document.getElementById("myUL").onmouseup = function(oEvent){
+    var list_id = oEvent.target.id;
+    if(!oEvent) oEvent = window.event;
+    if(oEvent.button==2){
+        console.log("right"+list_id);
+        window.confirm("are you sure?")
+
+    }
+}
 document.getElementById("myUL").addEventListener("click", function (e) {
     //console.log(e.target.id);
     var list_id = e.target.id;
