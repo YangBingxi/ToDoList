@@ -16,7 +16,7 @@ for (i = 0; i < close.length; i++) {
     close[i].onclick = function () {
         var div = this.parentElement;
         // div.style.display = "none";
-        window.alert("亲，完成了没就想删除？")
+        window.alert("亲，完成了没就想删除？"+"右击试试吧。")
     }
 }
 
@@ -28,11 +28,24 @@ document.getElementById("myUL").oncontextmenu = function(e){
 };
 document.getElementById("myUL").onmouseup = function(oEvent){
     var list_id = oEvent.target.id;
+    var div = oEvent.target;
     if(!oEvent) oEvent = window.event;
     if(oEvent.button==2){
         console.log("right"+list_id);
-        window.confirm("are you sure?")
+        var deleteResult = window.confirm("确定要删除这条记录吗？");
+        if (deleteResult==true){
+            console.log("true");
+            $.ajax({
+                type: 'POST',
+                url: '/changestatus/',
+                data: {status: 0, list_id: list_id},
+                dataType: 'json'
+            }).done();
+        div.style.display = "none";
 
+        }else {
+            console.log("False");
+        }
     }
 }
 document.getElementById("myUL").addEventListener("click", function (e) {
