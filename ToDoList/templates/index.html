@@ -17,15 +17,28 @@
 
 <ul id="myUL">
     {% for list in lists %}
+    {% if list.status==6: %}
+    <li id={{list.id}}>
+        {{list.content}}
+        <button class="ntop" id={{list.id}}>取消置顶</button>
+        <a class="createDate" href="/timeline">Create Date:&nbsp;&nbsp;{{list.create_date}}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+
+
+    {% for list in lists %}
     {% if list.status==2: %}
     <li id={{list.id}}>
         {{list.content}}
+        <button class="top" id={{list.id}}>置顶</button>
         <a class="createDate" href="/timeline">Create Date:&nbsp;&nbsp;{{list.create_date}}</a>
     </li>
     {% endif %}
     {% if list.status==1: %}
     <li class="checked" id={{list.id}}>
         {{list.content}}
+        <button class="top" id={{list.id}}>置顶</button>
         <a class="createDate" href="/timeline">Create Date:&nbsp;&nbsp;{{list.create_date}}</a>
     </li>
     {% endif %}

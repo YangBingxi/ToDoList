@@ -37,7 +37,9 @@ def change_status():
     list_id = int(request.values['list_id'])
     # print status, list_id
     li = List.query.filter_by(id=list_id)
-    if status is 5 and li[0].status is 1:
+    if status is 6:
+        li.update({"status": 6})
+    elif status is 5 and li[0].status is 1:
         li.update({"status": 2})
     elif status is 5 and li[0].status is 2:
         li.update({"status": 1})
