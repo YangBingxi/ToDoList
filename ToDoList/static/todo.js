@@ -53,13 +53,12 @@ document.getElementById("myUL").addEventListener("click", function (e) {
     //console.log(e.target.id);
     var list_id = e.target.id;
     //console.log(list_id);
-
     if (e.target.tagName=='BUTTON'){
         console.log(e.target.id);
         $.ajax({
             type: 'POST',
             url: '/changestatus/',
-            data: {status: 6, list_id: list_id},
+            data: {status: 6, list_id: e.target.id},
             dataType: 'json'
         }).done();
     }
