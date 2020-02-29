@@ -23,6 +23,7 @@ ul li {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    border-radius: 30px;
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
@@ -99,6 +100,7 @@ input {
     padding: 10px;
     float: left;
     font-size: 16px;
+    border-radius: 30px;
 }
 
 /* Style the "Add" button */
@@ -112,7 +114,7 @@ input {
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
-    border-radius: 0;
+    border-radius: 30px;
 }
 
 .addBtn:hover {
@@ -126,8 +128,15 @@ input {
     color: #000000;
 }
 
-.top{
+.top {
     float: right;
     margin-right: 42px;
     background-color: chartreuse;
+    border-radius: 30px;
+}
+.ntop {
+    float: right;
+    margin-right: 42px;
+    background-color: #35c0ff;
+    border-radius: 30px;
 }

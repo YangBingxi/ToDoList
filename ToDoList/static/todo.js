@@ -52,15 +52,26 @@ document.getElementById("myUL").onmouseup = function(oEvent){
 document.getElementById("myUL").addEventListener("click", function (e) {
     //console.log(e.target.id);
     var list_id = e.target.id;
-    //console.log(list_id);
+    console.log(list_id);
+    console.log(e.target.className);
     if (e.target.tagName=='BUTTON'){
-        console.log(e.target.id);
-        $.ajax({
-            type: 'POST',
-            url: '/changestatus/',
-            data: {status: 6, list_id: e.target.id},
-            dataType: 'json'
-        }).done();
+        if (e.target.className=='top'){
+            console.log(e.target.id);
+            $.ajax({
+                type: 'POST',
+                url: '/changestatus/',
+                data: {status: 6, list_id: e.target.id},
+                dataType: 'json'
+            }).done();
+        }
+        else if (e.target.className=='ntop'){
+             $.ajax({
+                type: 'POST',
+                url: '/changestatus/',
+                data: {status: 7, list_id: e.target.id},
+                dataType: 'json'
+            }).done();
+        }
     }
     if (e.target.tagName === 'LI') {
         e.target.classList.toggle('checked');
