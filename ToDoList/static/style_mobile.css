@@ -16,7 +16,7 @@ ul li {
     padding: 12px 8px 12px 40px;
     margin-top: 10px;
     background: #eee;
-    font-size: 18px;
+    font-size: 1em;
     transition: 0.2s;
 
     /* make the list items unselectable */
