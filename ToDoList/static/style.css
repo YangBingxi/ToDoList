@@ -133,10 +133,12 @@ input {
     margin-right: 42px;
     background-color: chartreuse;
     border-radius: 30px;
+    font-size: 20px;
 }
 .ntop {
     float: right;
     margin-right: 42px;
     background-color: #35c0ff;
     border-radius: 30px;
+    font-size: 20px;
 }
