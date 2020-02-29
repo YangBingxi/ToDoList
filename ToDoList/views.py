@@ -12,8 +12,20 @@ sys.setdefaultencoding('utf-8')
 
 @app.route("/")
 def index():
+    #lists = List.query.order_by(db.desc(List.id)).all()
+    return render_template('index.html')
+
+
+@app.route("/pc")
+def index_pc():
     lists = List.query.order_by(db.desc(List.id)).all()
-    return render_template('index.html', lists=lists)
+    return render_template('index_pc.html', lists=lists)
+
+
+@app.route("/mobile")
+def index_mobile():
+    lists = List.query.order_by(db.desc(List.id)).all()
+    return render_template('index_mobile.html', lists=lists)
 
 
 @app.route("/timeline")

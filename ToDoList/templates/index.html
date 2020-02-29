@@ -1,54 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <title>TodoList</title>
-    <link href="../static/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    window.location.href = "/mobile";
+} else {
+    window.location.href = "/pc";
+}
+</script>
 </head>
 <body>
-<div class="header" id="myDIV">
-    <h2>My To Do List</h2>
-    <h3>--&emsp;SwYoung <a href="/timeline">--My TimeLine</a></h3>
-    <input id="myInput" placeholder="Title..." type="text">
-    <span class="addBtn" onclick="newElement()">Add</span>
-</div>
-
-<ul id="myUL">
-    {% for list in lists %}
-    {% if list.status==6: %}
-    <li id={{list.id}}>
-        {{list.content}}
-        <button class="ntop" id={{list.id}}>取消置顶</button>
-        <a class="createDate" href="/timeline">Create Date:&nbsp;&nbsp;{{list.create_date}}</a>
-    </li>
-    {% endif %}
-    {% endfor %}
-
-
-    {% for list in lists %}
-    {% if list.status==2: %}
-    <li id={{list.id}}>
-        {{list.content}}
-        <button class="top" id={{list.id}}>置顶</button>
-        <a class="createDate" href="/timeline">Create Date:&nbsp;&nbsp;{{list.create_date}}</a>
-    </li>
-    {% endif %}
-    {% if list.status==1: %}
-    <li class="checked" id={{list.id}}>
-        {{list.content}}
-        <button class="top" id={{list.id}}>置顶</button>
-        <a class="createDate" href="/timeline">Create Date:&nbsp;&nbsp;{{list.create_date}}</a>
-    </li>
-    {% endif %}
-    {% endfor %}
-</ul>
-</body>
-</html>
-
-{% block js %}
-<script src="../static/todo.js" type="text/javascript"></script>
-<script src="../static/jquery.js" type="text/javascript"></script>
-
-{% endblock %}
