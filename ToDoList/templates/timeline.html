@@ -10,6 +10,18 @@
 <body>
 <div class="timeline">
     {% for list in lists %}
+    {% if list.status==6: %}
+    <div class="container left">
+        <div class="content" style="background-color: #35c0ff">
+            <h2>{{list.create_date}}</h2>
+            <p>{{list.content}}</p>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+
+    {% for list in lists %}
     {% if list.status==2: %}
     <div class="container left">
         <div class="content" style="background-color: #FF9F55">
