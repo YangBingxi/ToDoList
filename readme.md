@@ -1,6 +1,11 @@
 # my todo-list
 
+- [En](#based on python,flask and mysql)
+- [中文]
+
 ---
+
+## Create your TODO-List
 
 ## based on python,flask and mysql
 
@@ -96,3 +101,10 @@ use different color to mark each list
         }
     }
     ```
+
+
+
+---
+
+## 搭建自己的 TODO-List
+
