@@ -12,6 +12,7 @@
 - python2.7
 - flask1.1.1
 - SQLAlchemy3.0
+- **mysql5.7**
 
 ---
 
@@ -111,11 +112,17 @@ use different color to mark each list
 ### 环境：
 
 - **Python2.7**
-- *Flask1.1.1
-- SQLAlchemy3.0**
+- **Flask1.1.1**
+- **SQLAlchemy3.0**
+- **mysql5.7**
 
 ### 演示
 
 ![Demo](ToDoList/img/todolist.gif)
 
-### z
+### 使用指南
+
+#### 添加List事项
+
+在```Title```文本输入框内事项，点击```add```添加按钮即可。
+
