@@ -126,3 +126,6 @@ use different color to mark each list
 
 在```Title```文本输入框内事项，点击```add```添加按钮即可。
 
+#### 将事项标记为已完成
+
+在该事项上单击即可
