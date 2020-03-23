@@ -144,5 +144,12 @@ use different color to mark each list
 
 如果使用的时移动端，试着长按
 
+### Timeline-时间线
 
+使用不同的颜色代表不同状态的事项
+
+- 蓝色：置顶
+- 黄色：已完成
+- 黄色：等待完成
+- 红色：已删除
 
