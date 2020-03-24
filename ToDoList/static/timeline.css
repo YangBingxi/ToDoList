@@ -133,13 +133,20 @@ body {
     }
 }
 .back{
-    border-radius: 38px;
-    color: #000000;
-    border-color: #35c0ff;
-    background-color: #35c0ff;
-    height: 73px;
-    float: right;
-    font-size: 25px;
+
+border-radius: 38px;
+color: #000000;
+border-color: #35c0ff;
+background-color: #35c0ff;
+height: 50px;
+width: 50px;
+float: right;
+font-size: 20px;
+text-align: center;
+vertical-align: middle;
+margin-top: 10px;
+padding-top: 11px;
+padding-left: 2px;
+text-decoration: none;
 
 }
-
