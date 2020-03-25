@@ -116,4 +116,10 @@ function newElement() {
             div.style.display = "none";
         }
     }
+
+    setTimeout(function () {
+        window.location.reload();
+    },1)
+
+
 }
