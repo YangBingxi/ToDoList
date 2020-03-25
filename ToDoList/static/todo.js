@@ -72,6 +72,9 @@ document.getElementById("myUL").addEventListener("click", function (e) {
                 dataType: 'json'
             }).done();
         }
+        setTimeout(function () {
+            window.location.reload();
+        },10)
     }
     if (e.target.tagName === 'LI') {
         e.target.classList.toggle('checked');
@@ -119,7 +122,7 @@ function newElement() {
 
     setTimeout(function () {
         window.location.reload();
-    },1)
+    },10)
 
 
 }
