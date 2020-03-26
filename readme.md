@@ -1,7 +1,8 @@
 # my todo-list
 
-- [En](#based on python,flask and mysql)
-- [中文](#搭建自己的 TODO-List)
+[En](#based on python,flask and mysql)
+
+[中文](#搭建自己的 TODO-List)
 
 ---
 
