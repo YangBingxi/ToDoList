@@ -1,12 +1,12 @@
 # my todo-list
 
-[En](#based on python,flask and mysql)
+<a href="#en">En</a>
 
-[中文](#搭建自己的 TODO-List)
+<a href="#zh">中文</a>
 
 ---
 
-## Create your TODO-List
+<h2 name=en> Create your TODO-List</h2>
 
 ## based on python,flask and mysql
 
@@ -108,7 +108,7 @@ use different color to mark each list
 
 ---
 
-## 搭建自己的 TODO-List
+<h2 name=zh>搭建自己的 TODO-List</h2>
 
 ### 环境：
 
