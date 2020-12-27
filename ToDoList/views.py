@@ -6,8 +6,8 @@ from flask import render_template, request
 from ToDoList import app, db
 from ToDoList.models import List
 
-reload(sys)
-sys.setdefaultencoding('utf-8')
+# reload(sys)
+# sys.setdefaultencoding('utf-8')
 
 
 @app.route("/")
@@ -49,15 +49,15 @@ def change_status():
     list_id = int(request.values['list_id'])
     # print status, list_id
     li = List.query.filter_by(id=list_id)
-    if status is 6:
+    if status == 6:
         li.update({"status": 6})
-    elif status is 7:
+    elif status == 7:
         li.update({"status": 2})
-    elif status is 5 and li[0].status is 1:
+    elif status == 5 and li[0].status == 1:
         li.update({"status": 2})
-    elif status is 5 and li[0].status is 2:
+    elif status == 5 and li[0].status == 2:
         li.update({"status": 1})
-    elif status is 0:
+    elif status == 0:
         li.update({"status": 0})
     db.session.commit()
     return ""
